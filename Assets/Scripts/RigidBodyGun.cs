@@ -18,7 +18,6 @@ public class RigidBodyGun : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
-            attackPoint.rotation = fpsCam.transform.rotation;
             Shoot();
         }
     }

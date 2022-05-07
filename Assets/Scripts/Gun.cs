@@ -35,7 +35,7 @@ public class Gun : MonoBehaviour
             else if(hit.collider.tag == "MovebleObject")
             {
                 print("hit");
-                hit.rigidbody.AddForce(Camera.main.transform.forward * 30f, ForceMode.Impulse);
+                hit.rigidbody.AddForce(Camera.main.transform.forward * 10f, ForceMode.Impulse);
             }
         }
     }

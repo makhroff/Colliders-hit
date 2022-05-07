@@ -10,9 +10,9 @@ public class Inventory : MonoBehaviour
     {
         for(int i = 0; i < items.Length; i++)
         {
-            if (items[i] == items[0])
-                items[i].SetActive(true);
-            else
+            items[currentItem].SetActive(true);
+
+            if(items[i] != items[currentItem])
                 items[i].SetActive(false);
         }
     }

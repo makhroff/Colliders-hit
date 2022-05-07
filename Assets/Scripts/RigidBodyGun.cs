@@ -44,6 +44,6 @@ public class RigidBodyGun : MonoBehaviour
 
         GameObject currentBullet = Instantiate(bulet, attackPoint.position, fpsCam.transform.rotation);
         //currentBullet.transform.forward = bulletDirection.normalized;
-        currentBullet.GetComponent<Rigidbody>().AddForce(transform.forward * 30f, ForceMode.Impulse);
+        currentBullet.GetComponent<Rigidbody>()?.AddForce(transform.forward * 30f, ForceMode.Impulse);
     }
 }

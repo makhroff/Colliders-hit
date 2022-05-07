@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Utils : MonoBehaviour
+namespace Utils
 {
-    public static GameObject FindParent(GameObject go)
+    public static class MyUtils
     {
-        if (go.transform.parent == null)
-            return go;
+        public static GameObject FindParent(this GameObject go)
+        {
+            if (go.transform.parent == null)
+                return go;
 
-        return FindParent(go.transform.parent.gameObject);
+            return FindParent(go.transform.parent.gameObject);
+        }
     }
 }

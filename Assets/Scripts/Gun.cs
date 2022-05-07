@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utils;
 
 public class Gun : MonoBehaviour
 {
@@ -25,7 +26,9 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
         {
-            Target target = Utils.FindParent(hit.collider.gameObject).GetComponent<Target>();
+            GameObject hitGameObject = hit.collider.gameObject;
+
+            Target target = hitGameObject.FindParent().GetComponent<Target>();
 
             if(target)
             {
